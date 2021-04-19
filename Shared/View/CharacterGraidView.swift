@@ -22,8 +22,10 @@ struct CharacterGraidView: View {
     ]
     
     var body: some View {
+        
+        let list = FontProvider.shared.fetchCharacterList(familyName: selectedFontFamily)
+        
         ZStack(alignment: .top) {
-            let list = FontProvider.shared.fetchCharacterList(familyName: selectedFontFamily)
             
             if list.isEmpty {
                 Text("Select a font to preview")
@@ -49,6 +51,7 @@ struct CharacterGraidView: View {
                 }
             }
         }
+        .navigationTitle(list.isEmpty ? "FontFace" : selectedFontName)
     }
     
     func empty() -> Bool {
