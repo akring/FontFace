@@ -9,7 +9,7 @@ import Foundation
 
 struct FontModel: Hashable {
     var name: String
-    var characters: [CharacterModel]
+    var familyName: String
 }
 
 struct CharacterModel: Hashable {
@@ -17,6 +17,6 @@ struct CharacterModel: Hashable {
     var unicode: String
 }
 
-let mockFontModel = FontModel(name: "PingFang", characters: [mockCharacterModel])
+let mockFontModel = FontModel(name: "PingFang", familyName: "PingFang")
 
 let mockCharacterModel = CharacterModel(character: "T", unicode: "\u{e638}")

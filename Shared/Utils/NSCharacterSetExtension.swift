@@ -22,7 +22,6 @@ extension NSCharacterSet {
                         let unicodeValue = String(data: dataenc!, encoding: String.Encoding.utf8) ?? ""
                         
                         let v = CharacterModel(character: String(s), unicode: unicodeValue)
-                        
                         results.append(v)
                     }
                 }
